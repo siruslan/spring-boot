@@ -1,4 +1,4 @@
-ROM azul/zulu-openjdk:latest
+FROM azul/zulu-openjdk:latest
 
 RUN apt-get install -y wget
 
@@ -12,5 +12,5 @@ RUN cd $APP_DIR && wget $APP_PKG -O $APP_NAME
 ADD /bin/start.sh /start.sh
 RUN chmod +x /start.sh
 
-CMD["/start.sh"]
+CMD ["/start.sh"]
 
